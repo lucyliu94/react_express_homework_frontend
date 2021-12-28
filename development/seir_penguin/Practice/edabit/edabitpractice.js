@@ -9,28 +9,28 @@
 // addUp(13) ➞ 91
 // addUp(600) ➞ 180300
 
-function addUp(num) {
-    //You want a counter to tally up the sum. 
-    let sum = 0;
-    //Now we are looping over up until the num parameter
-    for (let i = 1; i <= num; i++) {
-    //every loop we add to the sum counter. 
-      sum += i; // sum = sum + i 
-    }
-    return sum;
-  }
+// function addUp(num) {
+//     //You want a counter to tally up the sum. 
+//     let sum = 0;
+//     //Now we are looping over up until the num parameter
+//     for (let i = 1; i <= num; i++) {
+//     //every loop we add to the sum counter. 
+//       sum += i; // sum = sum + i 
+//     }
+//     return sum;
+//   }
 
-  console.log(addUp(4))
+//   console.log(addUp(4))
 
 //////
 //Function that converts minutes into seconds
 //////
 
-function convert(minutes) {
-    return minutes * 60
-}
+// function convert(minutes) {
+//     return minutes * 60
+// }
 
-console.log(convert(20))
+// console.log(convert(20))
 
 ////////
 //Return the Remainder from Two Numbers
@@ -46,12 +46,12 @@ console.log(convert(20))
 // remainder(-9, 45) ➞ -9
 // remainder(5, 5) ➞ 0
 
-function remainder(x, y) {
-    if (x === y){
-        return 0 
-    } else (x % y != 0)
-	return x
-}
+// function remainder(x, y) {
+//     if (x === y){
+//         return 0 
+//     } else (x % y != 0)
+// 	return x
+// }
 
 // Create a function that takes an array of numbers and return both the minimum and maximum numbers, in that order.
 
@@ -69,3 +69,47 @@ function remainder(x, y) {
 // 	arr.splice()
   
 // }
+
+let count = 0;
+
+function cc(card) {
+
+  switch (card) {
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+      count++;
+      break;
+    case 10:
+    case "J":
+    case "Q":
+    case "K":
+    case "A":
+      count--;
+      break;
+  }
+  if (count > 0) {
+    return count + " Bet";
+  } else {
+    return count + " Hold";
+  }
+}
+
+console.log(cc(10))
+
+
+//Modify the function checkObj to test if an object passed to the function (obj) contains a specific property (checkProp). 
+//If the property is found, return that property's value. If not, return "Not Found".
+
+function checkObj(obj, checkProp) {
+  // Only change code below this line
+  if (obj.hasOwnProperty(checkProp)) {
+    return obj[checkProp];
+  } else {
+    return "Not Found";
+  }
+  return "Change Me!";
+  // Only change code above this line
+}
